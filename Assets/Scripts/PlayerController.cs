@@ -62,12 +62,13 @@ public class PlayerController2D : MonoBehaviour
 
     void Flip()
     {
-        // Toggle the facing direction
-        isFacingRight = !isFacingRight;
-        
         // Flip the sprite by inverting the X scale
         Vector3 localScale = transform.localScale;
         localScale.x *= -1f;
         transform.localScale = localScale;
+
+
+        // Toggle the facing direction
+        isFacingRight = !isFacingRight;
     }
 }
