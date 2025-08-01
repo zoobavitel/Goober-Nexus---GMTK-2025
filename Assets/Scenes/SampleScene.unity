@@ -253,7 +253,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &125330746
+--- !u!1001 &122554127
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -263,11 +263,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5250558072293002597, guid: 3d1bbfd838bf14b81ac92c2c158a1d4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.013186
+      value: -2.8575058
       objectReference: {fileID: 0}
     - target: {fileID: 5250558072293002597, guid: 3d1bbfd838bf14b81ac92c2c158a1d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0380836
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 5250558072293002597, guid: 3d1bbfd838bf14b81ac92c2c158a1d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -304,6 +304,10 @@ PrefabInstance:
     - target: {fileID: 6409881351051937028, guid: 3d1bbfd838bf14b81ac92c2c158a1d4d, type: 3}
       propertyPath: m_Name
       value: MainCharacterMASTER
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844683725294840161, guid: 3d1bbfd838bf14b81ac92c2c158a1d4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -972,4 +976,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 619394802}
   - {fileID: 647424748}
-  - {fileID: 125330746}
+  - {fileID: 122554127}
