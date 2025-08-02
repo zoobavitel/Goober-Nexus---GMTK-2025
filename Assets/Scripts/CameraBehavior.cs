@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SceneManager : MonoBehaviour
+public class CameraBehavior : MonoBehaviour
 {
     void Start()
     {
