@@ -12,7 +12,7 @@ public class PlayerControllerLukeVers : MonoBehaviour
     //Private Stats
     private Rigidbody2D rb;
     private float horizontalInput;
-    
+    private bool isFacingRight;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,6 +20,7 @@ public class PlayerControllerLukeVers : MonoBehaviour
         //Setting Rigidbody
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        isFacingRight = true;
     }
 
     // Update is called once per frame
@@ -38,9 +39,11 @@ public class PlayerControllerLukeVers : MonoBehaviour
     private void GetInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
-
+        if (horizontalInput > 0 && !isFacingRight || horizontalInput < 0 && isFacingRight)
+        {
+            Flip();
+        }
         
-
         //Get Jump Input
         if (Input.GetButtonDown("Jump"))
         //if (Input.GetButton("Jump"))
@@ -72,5 +75,13 @@ public class PlayerControllerLukeVers : MonoBehaviour
     private bool GroundCheck()
     {
         return Physics2D.OverlapCircle(groundCheckPos.transform.position, 0.2f, groundLayer);
+    }
+
+    private void Flip()
+    {
+        Vector2 localScale = transform.localScale;
+        localScale.x *= -1;
+        transform.localScale = localScale;
+        isFacingRight = !isFacingRight;
     }
 }
